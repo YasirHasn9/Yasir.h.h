@@ -5,7 +5,6 @@ export const GlobalStyle = createGlobalStyle`
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -57,9 +56,5 @@ table {
 body,html {
     font-size: 62.25%;
     font-family: 'Roboto', sans-serif;
-}
-
-h1 {
-    font-size: 3rem;
 }
 `;
