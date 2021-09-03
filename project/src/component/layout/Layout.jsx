@@ -1,5 +1,6 @@
-import { Wrapper } from "./style.layout";
-import { Header } from "../header/Header";
+import { Wrapper, HeroSection } from "./style.layout";
+import { Nav } from "../nav/Nav";
+import { Footer } from "../footer/Footer";
 import { DarkModeBtn } from "../../common/buttons/darkmodeBtn";
 import { CgDarkMode } from "react-icons/cg";
 
@@ -10,14 +11,21 @@ export const Layout = ({ children }) => {
         setDarkMode((prev) => !prev);
     };
     return (
-        <Wrapper darkMode={darkMode}>
-            <DarkModeBtn darkMode={darkMode} toggleMode={toggleMode}>
-                <div className="darkmodeBth">
-                    <CgDarkMode />
-                </div>
-            </DarkModeBtn>
-            <Header />
-            <main>{children}</main>
-        </Wrapper>
+        <>
+            <Wrapper>
+                <header>
+                    <Nav />
+
+                    <div className="introduction">
+                        <h1 className="introduction-heading">Learner</h1>
+                        <h1 className="introduction-heading">Problem Solver</h1>
+                    </div>
+                </header>
+                <main>{children}</main>
+                <footer>
+                    <Footer />
+                </footer>
+            </Wrapper>
+        </>
     );
 };
